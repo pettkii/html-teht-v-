@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    .myDiv {
+        border: 5px solid green;
+        background-color: darkblue;
+        color: white;
+    }
+    </style>
 </head>
 <body>
     <h4>Miten tyhjän tagin käyttö eroaa muiden tagien käytöstä?</h4>
@@ -26,6 +33,22 @@
 
     <a href="https://www.salpaus.fi/">Salpaus</a>
     <a href="portfolio.html">Portfolio</a>
+    <br>
+
+    <div class="myDiv"><p style="text-align: center;">Testailua</p></div>
+
+    <br>
+    <form>
+        <input type="text" value="Nimi"><br>
+        <input type="checkbox" id="check1" name="kulkuneuvo1" value="pyörä">
+        <label for=""check1">Minulla on pyörä</label><br>
+        <input type="checkbox" id="check2" name="kulkuneuvo2" value="auto">
+        <label for=""check1">Minulla on auto</label><br>
+        <input type="checkbox" id="check3" name="kulkuneuvo3" value="vene">
+        <label for=""check1">Minulla on vene</label><br>
+        <input type="submit">
+        
+    </form>
 
 </body>
 </html>
