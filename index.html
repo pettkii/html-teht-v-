@@ -13,6 +13,12 @@
         color: white;
     }
     </style>
+    <script>
+    // painike muuttaa kappaleen sisältöä
+    function muutaKappale() {
+        document.getElementById('myParagraph').innerHTML = 'Kappale muutettu!';
+    }
+    </script>
 </head>
 <body>
     <h4>Miten tyhjän tagin käyttö eroaa muiden tagien käytöstä?</h4>
@@ -24,9 +30,14 @@
     <h2>Otsikko 2</h2>
     <h3>Otsikko 3</h3>
     
+    <!-- painike muuttaa kappaleen tekstin väriä -->
     <button onclick="document.getElementById('myParagraph').style.color = 'yellow'">Vaihda väriä!</button>
+    
     <p id="myParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum ac nunc ut cursus. Donec vitae commodo massa. Nunc porttitor massa quis metus accumsan, bibendum malesuada risus egestas. Ut volutpat nisi ac nisl fermentum, sed dictum erat malesuada. Sed leo lorem, porta in ornare et, semper id velit. Vivamus accumsan ut sapien eget accumsan. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse nec sem sit amet massa lobortis aliquam. Donec viverra odio a vehicula varius.</p>
     
+    <button onclick="muutaKappale()">Muuta kappaletta!</button>
+    
+    <br>
     <br>
     <img src="catpicture.jpg" width="200"alt="Kissa kuva">
     <h3>Lista</h3>
