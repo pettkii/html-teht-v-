@@ -18,7 +18,9 @@
     function muutaKappale() {
         document.getElementById('myParagraph').innerHTML = 'Kappale muutettu!';
     }
+
     </script>
+
 </head>
 <body>
     <h4>Miten tyhjän tagin käyttö eroaa muiden tagien käytöstä?</h4>
@@ -81,5 +83,22 @@
     <p>
         var ja let muuttujia voi uudelleenmäärittää(reassign) kun taas const muuttujia ei voi uudelleenmäärittää
     </p>
+    <br>
+    <div>
+        <p id="ikä1">Testi</p>
+    </div>
+    <script>
+
+    let luku = 17;
+    if (luku < 18) {
+        alert("Alaikäinen");
+        document.getElementById('ikä1').innerHTML = "Alaikäinen";
+    } else {
+        alert("Täysi-ikäinen")
+        document.getElementById('ikä1').innerHTML = "Täysi-ikäinen";
+    }
+
+    </script>
+    
 </body>
 </html>
