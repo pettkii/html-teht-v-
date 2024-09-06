@@ -87,6 +87,7 @@
     <div>
         <p id="ikä1">Testi</p>
     </div>
+    <br>
     <div id="huhuu">
 
     </div>
@@ -102,9 +103,15 @@
         document.getElementById('ikä1').innerHTML = "Täysi-ikäinen";
     }
     let i = 0;
+    let parent = document.querySelector('#huhuu');
     do {
+        let p = document.createElement('p');
+        p.textContent = "Huhuu?!";
+
+        parent.appendChild(p);
         i++;
-        document.get
+        // document.getElementById('huhuu').innerHTML = "<p>Huhuu?!</p>";
+
     } 
     while (i < 5)
     </script>
