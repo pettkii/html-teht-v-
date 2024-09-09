@@ -92,48 +92,52 @@
     </div>
 
     <div id="lista1">
-        
+
     </div>
 
-    <form id="nimiform" action="" onsubmit="return myTervehdys">
-        <!-- <label for="enimi">Etunimi</label> -->
-        <input type="text" id="etunimi" value="Etunimi">
-        <!-- <label for="snimi">Sukunimi</label> -->
-        <input type="text" id="sukunimi" value="Sukunimi">
-        <input type="submit">
+    <div id="nimet">
 
-    </form>
+    </div>
+
+    <div>
+        <form id="nimiform" action="">
+            <!-- <label for="enimi">Etunimi</label> -->
+            <input type="text" id="etunimi" value="Etunimi">
+            <!-- <label for="snimi">Sukunimi</label> -->
+            <input type="text" id="sukunimi" value="Sukunimi">
+            <input type="button" value="Lähetä!" onclick="myTervehdys()">
+
+        </form>
+    </div>
+    <br>
+
 
     <script>
-        /*
-        const form = document.getElementById('nimiform').addEventListener('submit', myTervehdys(event)){
-            
-            // hae etunimi ja sukunimi
-            // tee tervehdys ja liitä se nimen eteen
-            // printtaa sivulle
-        
+
+        function myTervehdys() {
+            const form = document.querySelector('#nimiform');
+            let etunimi = form.elements.etunimi.value;
+            let sukunimi = form.elements.sukunimi.value;
+            let tervehdys = "Hei " + etunimi + " " + sukunimi;
+            // alert(tervehdys);
+            let parentone = document.querySelector('#nimet');
+            let p = document.createElement('p');
+            p.textContent = tervehdys;
+            parentone.appendChild(p);
+            //console.log();
         }
-        
-        // tee tervehdys
-        function myTervehdys(){
-            // hae etunimi ja sukunimi
-            let etunimi = getElementById('etunimi');
-            let sukunimi = getElementById('sukunimi');
-            // tee tervehdys ja liitä se nimen eteen
-            let tervehdys = "Hei" + etunimi + sukunimi;
-            // printtaa sivulle
 
 
-        }
-        */
+
+
 
         // tarkastaa ja ilmoittaa iän
         let luku = 17;
         if (luku < 18) {
-            alert("Alaikäinen");
+            //alert("Alaikäinen");
             document.getElementById('ikä1').innerHTML = "Alaikäinen";
         } else {
-            alert("Täysi-ikäinen");
+            //alert("Täysi-ikäinen");
             document.getElementById('ikä1').innerHTML = "Täysi-ikäinen";
         }
 
@@ -168,6 +172,32 @@
             par.appendChild(p);
         };
         
+        /*
+        const form = document.getElementById('nimiform').addEventListener('submit', myTervehdys(event)){
+            
+            // hae etunimi ja sukunimi
+            // tee tervehdys ja liitä se nimen eteen
+            // printtaa sivulle
+        
+        }
+        
+        // tee tervehdys
+        function myTervehdys() {
+            // hae etunimi ja sukunimi
+            let etunimi = getElementById('etunimi');
+            let sukunimi = getElementById('sukunimi');
+            // tee tervehdys ja liitä se nimen eteen
+            let tervehdys = "Hei" + etunimi + sukunimi;
+
+            // printtaa sivulle
+            let names = document.querySelector('#nimet');
+            let para = document.createElement('p');
+            para.innerHTML = tervehdys;
+            names.appendChild(para);
+
+        }
+        */
+
 
     </script>
     
