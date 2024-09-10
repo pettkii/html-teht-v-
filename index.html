@@ -95,8 +95,10 @@
 
     </div>
 
-    <div id="nimet">
+    <div>
+        <p id="nimet">
 
+        </p>
     </div>
 
     <div>
@@ -114,22 +116,22 @@
 
     <script>
 
+        // printtaa valittuun div elementtiin sivulla annetuista nimistä tervehdyksen
         function myTervehdys() {
+            // hae etunimi ja sukunimi sivulta
             const form = document.querySelector('#nimiform');
             let etunimi = form.elements.etunimi.value;
             let sukunimi = form.elements.sukunimi.value;
-            let tervehdys = "Hei " + etunimi + " " + sukunimi;
-            // alert(tervehdys);
-            let parentone = document.querySelector('#nimet');
-            let p = document.createElement('p');
-            p.textContent = tervehdys;
-            parentone.appendChild(p);
-            //console.log();
+    
+            // tee tervehdys, liitä se nimen eteen ja printtaa sivulle
+            document.getElementById('nimet').innerHTML = tulostaNimet(etunimi, sukunimi);
+        
         }
+        // palauttaa tekstin nimi parametreistä ja tervehdyksestä
+        function tulostaNimet(etunimi, sukunimi) {
+            return "Hei " + etunimi + " " + sukunimi;
 
-
-
-
+        }
 
         // tarkastaa ja ilmoittaa iän
         let luku = 17;
@@ -152,52 +154,21 @@
             i++;
             // document.getElementById('huhuu').innerHTML = "<p>Huhuu?!</p>";
 
-        } 
-        while (i < 5);
+        } while (i < 5);
+        
         
         // lista
         const lista = ["Koira", "Kissa", "Hevonen", "Hiiri", "Marsu"];
-        // hae div elementti
-        let par = document.querySelector('#lista1');
+        // for loop iteroi listaa
         for (let index = 0; index < lista.length; index++) {
-            // valitse item listasta
-            element = lista[index];
+            // valitse item listasta ja lisää huutomerkki perään
+            lista[index] = lista[index] + "!";
             // lisää itemiin "!"
-            element += "!";
-            // tee p elemenntti
-            let p = document.createElement('p');
-            // lisää p elementtiin item
-            p.textContent = element;
-            // lisää p elementti documenttiin
-            par.appendChild(p);
-        };
-        
-        /*
-        const form = document.getElementById('nimiform').addEventListener('submit', myTervehdys(event)){
+            // element = lista[index] + "!";
             
-            // hae etunimi ja sukunimi
-            // tee tervehdys ja liitä se nimen eteen
-            // printtaa sivulle
-        
-        }
-        
-        // tee tervehdys
-        function myTervehdys() {
-            // hae etunimi ja sukunimi
-            let etunimi = getElementById('etunimi');
-            let sukunimi = getElementById('sukunimi');
-            // tee tervehdys ja liitä se nimen eteen
-            let tervehdys = "Hei" + etunimi + sukunimi;
-
-            // printtaa sivulle
-            let names = document.querySelector('#nimet');
-            let para = document.createElement('p');
-            para.innerHTML = tervehdys;
-            names.appendChild(para);
-
-        }
-        */
-
+            console.log(lista[index]);
+    
+        };
 
     </script>
     
