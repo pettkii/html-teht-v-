@@ -1,1 +1,1 @@
-# github.io/pettkii/html-teht-v-
+# pettkii.github.io/html-teht-v-
